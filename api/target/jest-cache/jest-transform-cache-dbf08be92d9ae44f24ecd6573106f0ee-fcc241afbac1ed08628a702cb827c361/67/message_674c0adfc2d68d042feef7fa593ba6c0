@@ -1,0 +1,80 @@
+78456a1b902ccdf4380d9bc7b93a08e0
+"use strict";
+
+/* istanbul ignore next */
+function cov_1p3vsow8ic() {
+  var path = "/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/strider/src/errors/translator/user/message.ts";
+  var hash = "d32745d7ec6294f4a946e76e097ad9ca1e282bf7";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/strider/src/errors/translator/user/message.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 0
+        },
+        end: {
+          line: 5,
+          column: 2
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/strider/src/errors/translator/user/message.ts",
+      mappings: ";;AAAA,kBAAe;IACb,UAAU,EAAE,qBAAqB;CAClC,CAAC",
+      names: [],
+      sources: ["/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/strider/src/errors/translator/user/message.ts"],
+      sourcesContent: ["export default {\n  'USER-000': 'Failed to get user.',\n};\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "d32745d7ec6294f4a946e76e097ad9ca1e282bf7"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1p3vsow8ic = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+
+cov_1p3vsow8ic();
+cov_1p3vsow8ic().s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+/* istanbul ignore next */
+cov_1p3vsow8ic().s[1]++;
+exports.default = {
+  'USER-000': 'Failed to get user.'
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUFBLGtCQUFlO0VBQ2IsWUFBWTtBQURDLENBQWYiLCJuYW1lcyI6WyJleHBvcnRzIl0sInNvdXJjZXMiOlsiL2hvbWUvZmlsaXBwb2lwcG9saXRvcm9kcmlndWVzL8OBcmVhIGRlIFRyYWJhbGhvL01ZUFJPSkVDVFMvc3RyaWRlci9zcmMvZXJyb3JzL3RyYW5zbGF0b3IvdXNlci9tZXNzYWdlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IHtcbiAgJ1VTRVItMDAwJzogJ0ZhaWxlZCB0byBnZXQgdXNlci4nLFxufTtcbiJdfQ==

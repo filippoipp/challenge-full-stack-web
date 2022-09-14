@@ -1,0 +1,45 @@
+aa7b85e01d1f47ce0c9fe515d1115f22
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const typeorm_1 = require("typeorm");
+// eslint-disable-next-line import/no-cycle
+const post_1 = __importDefault(require("../../post/entities/post"));
+let User = class User {
+};
+__decorate([
+    (0, typeorm_1.PrimaryGeneratedColumn)('uuid', { name: 'id' }),
+    __metadata("design:type", String)
+], User.prototype, "id", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ unique: true, length: 14 }),
+    __metadata("design:type", String)
+], User.prototype, "username", void 0);
+__decorate([
+    (0, typeorm_1.OneToMany)(() => post_1.default, (post) => post.user),
+    __metadata("design:type", Array)
+], User.prototype, "posts", void 0);
+__decorate([
+    (0, typeorm_1.CreateDateColumn)({ name: 'created_at' }),
+    __metadata("design:type", Date)
+], User.prototype, "createdAt", void 0);
+__decorate([
+    (0, typeorm_1.UpdateDateColumn)({ name: 'updated_at', select: false }),
+    __metadata("design:type", Date)
+], User.prototype, "updatedAt", void 0);
+User = __decorate([
+    (0, typeorm_1.Entity)('user')
+], User);
+exports.default = User;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJmaWxlIjoiL2hvbWUvZmlsaXBwb2lwcG9saXRvcm9kcmlndWVzL8OBcmVhIGRlIFRyYWJhbGhvL01ZUFJPSkVDVFMvc3RyaWRlci9zcmMvZG9tYWluL3VzZXIvZW50aXRpZXMvdXNlci50cyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7OztBQUFBLHFDQU9pQjtBQUNqQiwyQ0FBMkM7QUFDM0Msb0VBQTRDO0FBRzVDLElBQXFCLElBQUksR0FBekIsTUFBcUIsSUFBSTtDQWV4QixDQUFBO0FBYkM7SUFEQyxJQUFBLGdDQUFzQixFQUFDLE1BQU0sRUFBRSxFQUFFLElBQUksRUFBRSxJQUFJLEVBQUUsQ0FBQzs7Z0NBQ3BDO0FBR1g7SUFEQyxJQUFBLGdCQUFNLEVBQUMsRUFBRSxNQUFNLEVBQUUsSUFBSSxFQUFFLE1BQU0sRUFBRSxFQUFFLEVBQUUsQ0FBQzs7c0NBQ3BCO0FBR2pCO0lBREMsSUFBQSxtQkFBUyxFQUFDLEdBQUcsRUFBRSxDQUFDLGNBQUksRUFBRSxDQUFDLElBQUksRUFBRSxFQUFFLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQzs7bUNBQzVCO0FBR2Y7SUFEQyxJQUFBLDBCQUFnQixFQUFDLEVBQUUsSUFBSSxFQUFFLFlBQVksRUFBRSxDQUFDOzhCQUM5QixJQUFJO3VDQUFDO0FBR2hCO0lBREMsSUFBQSwwQkFBZ0IsRUFBQyxFQUFFLElBQUksRUFBRSxZQUFZLEVBQUUsTUFBTSxFQUFFLEtBQUssRUFBRSxDQUFDOzhCQUM3QyxJQUFJO3VDQUFDO0FBZEcsSUFBSTtJQUR4QixJQUFBLGdCQUFNLEVBQUMsTUFBTSxDQUFDO0dBQ00sSUFBSSxDQWV4QjtrQkFmb0IsSUFBSSIsIm5hbWVzIjpbXSwic291cmNlcyI6WyIvaG9tZS9maWxpcHBvaXBwb2xpdG9yb2RyaWd1ZXMvw4FyZWEgZGUgVHJhYmFsaG8vTVlQUk9KRUNUUy9zdHJpZGVyL3NyYy9kb21haW4vdXNlci9lbnRpdGllcy91c2VyLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7XG4gIEVudGl0eSxcbiAgQ3JlYXRlRGF0ZUNvbHVtbixcbiAgVXBkYXRlRGF0ZUNvbHVtbixcbiAgUHJpbWFyeUdlbmVyYXRlZENvbHVtbixcbiAgQ29sdW1uLFxuICBPbmVUb01hbnksXG59IGZyb20gJ3R5cGVvcm0nO1xuLy8gZXNsaW50LWRpc2FibGUtbmV4dC1saW5lIGltcG9ydC9uby1jeWNsZVxuaW1wb3J0IFBvc3QgZnJvbSAnLi4vLi4vcG9zdC9lbnRpdGllcy9wb3N0JztcblxuQEVudGl0eSgndXNlcicpXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBVc2VyIHtcbiAgQFByaW1hcnlHZW5lcmF0ZWRDb2x1bW4oJ3V1aWQnLCB7IG5hbWU6ICdpZCcgfSlcbiAgaWQ6IHN0cmluZztcblxuICBAQ29sdW1uKHsgdW5pcXVlOiB0cnVlLCBsZW5ndGg6IDE0IH0pXG4gIHVzZXJuYW1lOiBzdHJpbmc7XG5cbiAgQE9uZVRvTWFueSgoKSA9PiBQb3N0LCAocG9zdCkgPT4gcG9zdC51c2VyKVxuICBwb3N0cz86IFBvc3RbXTtcblxuICBAQ3JlYXRlRGF0ZUNvbHVtbih7IG5hbWU6ICdjcmVhdGVkX2F0JyB9KVxuICBjcmVhdGVkQXQ6IERhdGU7XG5cbiAgQFVwZGF0ZURhdGVDb2x1bW4oeyBuYW1lOiAndXBkYXRlZF9hdCcsIHNlbGVjdDogZmFsc2UgfSlcbiAgdXBkYXRlZEF0OiBEYXRlO1xufVxuIl0sInZlcnNpb24iOjN9

@@ -1,0 +1,47 @@
+2ec599b647e630c3f9085157d464d289
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+describe('Test app config', () => {
+    const { env } = process;
+    beforeEach(() => {
+        jest.resetModules();
+        process.env = env;
+    });
+    afterAll(() => {
+        process.env = env;
+    });
+    test('Should return the environment variable configuration SERVERS', async () => {
+        const Config = (await Promise.resolve().then(() => __importStar(require('./app-config')))).default;
+        expect(Config.SERVERS.http.hostname).toEqual('0.0.0.0');
+        expect(Config.SERVERS.http.port).toEqual(3333);
+    });
+    test('Should return the default configuration SERVERS', async () => {
+        process.env.HTTP_HOST = '';
+        process.env.HTTP_PORT = '';
+        const Config = (await Promise.resolve().then(() => __importStar(require('./app-config')))).default;
+        expect(Config.SERVERS.http.hostname).toEqual('localhost');
+        expect(Config.SERVERS.http.port).toEqual(3000);
+    });
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJmaWxlIjoiL2hvbWUvZmlsaXBwb2lwcG9saXRvcm9kcmlndWVzL8OBcmVhIGRlIFRyYWJhbGhvL01ZUFJPSkVDVFMvc3RyaWRlci9zcmMvY29uZmlnL2FwcC1jb25maWcudGVzdC50cyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLFFBQVEsQ0FBQyxpQkFBaUIsRUFBRSxHQUFHLEVBQUU7SUFDL0IsTUFBTSxFQUFFLEdBQUcsRUFBRSxHQUFHLE9BQU8sQ0FBQztJQUV4QixVQUFVLENBQUMsR0FBRyxFQUFFO1FBQ2QsSUFBSSxDQUFDLFlBQVksRUFBRSxDQUFDO1FBQ3BCLE9BQU8sQ0FBQyxHQUFHLEdBQUcsR0FBRyxDQUFDO0lBQ3BCLENBQUMsQ0FBQyxDQUFDO0lBRUgsUUFBUSxDQUFDLEdBQUcsRUFBRTtRQUNaLE9BQU8sQ0FBQyxHQUFHLEdBQUcsR0FBRyxDQUFDO0lBQ3BCLENBQUMsQ0FBQyxDQUFDO0lBRUgsSUFBSSxDQUFDLDhEQUE4RCxFQUFFLEtBQUssSUFBSSxFQUFFO1FBQzlFLE1BQU0sTUFBTSxHQUFHLENBQUMsd0RBQWEsY0FBYyxHQUFDLENBQUMsQ0FBQyxPQUFPLENBQUM7UUFFdEQsTUFBTSxDQUFDLE1BQU0sQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxDQUFDLE9BQU8sQ0FBQyxTQUFTLENBQUMsQ0FBQztRQUN4RCxNQUFNLENBQUMsTUFBTSxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxDQUFDO0lBQ2pELENBQUMsQ0FBQyxDQUFDO0lBRUgsSUFBSSxDQUFDLGlEQUFpRCxFQUFFLEtBQUssSUFBSSxFQUFFO1FBQ2pFLE9BQU8sQ0FBQyxHQUFHLENBQUMsU0FBUyxHQUFHLEVBQUUsQ0FBQztRQUMzQixPQUFPLENBQUMsR0FBRyxDQUFDLFNBQVMsR0FBRyxFQUFFLENBQUM7UUFDM0IsTUFBTSxNQUFNLEdBQUcsQ0FBQyx3REFBYSxjQUFjLEdBQUMsQ0FBQyxDQUFDLE9BQU8sQ0FBQztRQUV0RCxNQUFNLENBQUMsTUFBTSxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsUUFBUSxDQUFDLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxDQUFDO1FBQzFELE1BQU0sQ0FBQyxNQUFNLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDLENBQUM7SUFDakQsQ0FBQyxDQUFDLENBQUM7QUFDTCxDQUFDLENBQUMsQ0FBQyIsIm5hbWVzIjpbXSwic291cmNlcyI6WyIvaG9tZS9maWxpcHBvaXBwb2xpdG9yb2RyaWd1ZXMvw4FyZWEgZGUgVHJhYmFsaG8vTVlQUk9KRUNUUy9zdHJpZGVyL3NyYy9jb25maWcvYXBwLWNvbmZpZy50ZXN0LnRzIl0sInNvdXJjZXNDb250ZW50IjpbImRlc2NyaWJlKCdUZXN0IGFwcCBjb25maWcnLCAoKSA9PiB7XG4gIGNvbnN0IHsgZW52IH0gPSBwcm9jZXNzO1xuXG4gIGJlZm9yZUVhY2goKCkgPT4ge1xuICAgIGplc3QucmVzZXRNb2R1bGVzKCk7XG4gICAgcHJvY2Vzcy5lbnYgPSBlbnY7XG4gIH0pO1xuXG4gIGFmdGVyQWxsKCgpID0+IHtcbiAgICBwcm9jZXNzLmVudiA9IGVudjtcbiAgfSk7XG5cbiAgdGVzdCgnU2hvdWxkIHJldHVybiB0aGUgZW52aXJvbm1lbnQgdmFyaWFibGUgY29uZmlndXJhdGlvbiBTRVJWRVJTJywgYXN5bmMgKCkgPT4ge1xuICAgIGNvbnN0IENvbmZpZyA9IChhd2FpdCBpbXBvcnQoJy4vYXBwLWNvbmZpZycpKS5kZWZhdWx0O1xuXG4gICAgZXhwZWN0KENvbmZpZy5TRVJWRVJTLmh0dHAuaG9zdG5hbWUpLnRvRXF1YWwoJzAuMC4wLjAnKTtcbiAgICBleHBlY3QoQ29uZmlnLlNFUlZFUlMuaHR0cC5wb3J0KS50b0VxdWFsKDMzMzMpO1xuICB9KTtcblxuICB0ZXN0KCdTaG91bGQgcmV0dXJuIHRoZSBkZWZhdWx0IGNvbmZpZ3VyYXRpb24gU0VSVkVSUycsIGFzeW5jICgpID0+IHtcbiAgICBwcm9jZXNzLmVudi5IVFRQX0hPU1QgPSAnJztcbiAgICBwcm9jZXNzLmVudi5IVFRQX1BPUlQgPSAnJztcbiAgICBjb25zdCBDb25maWcgPSAoYXdhaXQgaW1wb3J0KCcuL2FwcC1jb25maWcnKSkuZGVmYXVsdDtcblxuICAgIGV4cGVjdChDb25maWcuU0VSVkVSUy5odHRwLmhvc3RuYW1lKS50b0VxdWFsKCdsb2NhbGhvc3QnKTtcbiAgICBleHBlY3QoQ29uZmlnLlNFUlZFUlMuaHR0cC5wb3J0KS50b0VxdWFsKDMwMDApO1xuICB9KTtcbn0pO1xuIl0sInZlcnNpb24iOjN9

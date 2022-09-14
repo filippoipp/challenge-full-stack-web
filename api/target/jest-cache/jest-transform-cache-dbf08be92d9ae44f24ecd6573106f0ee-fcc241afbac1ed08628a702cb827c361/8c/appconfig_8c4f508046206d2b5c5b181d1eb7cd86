@@ -1,0 +1,231 @@
+280f9471f4ea4d6b64f8f1f33ba6adf7
+"use strict";
+
+/* istanbul ignore next */
+function cov_1m77lgt4et() {
+  var path = "/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/strider/src/config/app-config.ts";
+  var hash = "5b7822d0546edfe5b15af123d10ff659aa25a849";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/strider/src/config/app-config.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 5,
+          column: 0
+        },
+        end: {
+          line: 5,
+          column: 54
+        }
+      },
+      "2": {
+        start: {
+          line: 6,
+          column: 0
+        },
+        end: {
+          line: 11,
+          column: 2
+        }
+      },
+      "3": {
+        start: {
+          line: 12,
+          column: 0
+        },
+        end: {
+          line: 12,
+          column: 25
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 5,
+            column: 21
+          },
+          end: {
+            line: 5,
+            column: 53
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 5,
+            column: 21
+          },
+          end: {
+            line: 5,
+            column: 44
+          }
+        }, {
+          start: {
+            line: 5,
+            column: 48
+          },
+          end: {
+            line: 5,
+            column: 53
+          }
+        }],
+        line: 5
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 8,
+            column: 18
+          },
+          end: {
+            line: 8,
+            column: 47
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 8,
+            column: 18
+          },
+          end: {
+            line: 8,
+            column: 34
+          }
+        }, {
+          start: {
+            line: 8,
+            column: 38
+          },
+          end: {
+            line: 8,
+            column: 47
+          }
+        }],
+        line: 8
+      },
+      "2": {
+        loc: {
+          start: {
+            line: 9,
+            column: 14
+          },
+          end: {
+            line: 9,
+            column: 46
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 9,
+            column: 14
+          },
+          end: {
+            line: 9,
+            column: 38
+          }
+        }, {
+          start: {
+            line: 9,
+            column: 42
+          },
+          end: {
+            line: 9,
+            column: 46
+          }
+        }],
+        line: 9
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    f: {},
+    b: {
+      "0": [0, 0],
+      "1": [0, 0],
+      "2": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/strider/src/config/app-config.ts",
+      mappings: ";;AAAA,MAAM,MAAM;;AACI,kBAAW,GAAG,OAAO,CAAC,GAAG,CAAC,WAAW,IAAI,KAAK,CAAC;AAE/C,cAAO,GAAG;IACtB,IAAI,EAAE;QACJ,QAAQ,EAAE,OAAO,CAAC,GAAG,CAAC,IAAI,IAAI,SAAS;QACvC,IAAI,EAAE,MAAM,CAAC,OAAO,CAAC,GAAG,CAAC,IAAI,CAAC,IAAI,IAAI;KACvC;CACF,CAAC;AAGJ,kBAAe,MAAM,CAAC",
+      names: [],
+      sources: ["/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/strider/src/config/app-config.ts"],
+      sourcesContent: ["class Config {\n  public static ENVIRONMENT = process.env.ENVIRONMENT || 'dev';\n\n  public static SERVERS = {\n    http: {\n      hostname: process.env.HOST || '0.0.0.0',\n      port: Number(process.env.PORT) || 3001,\n    },\n  };\n}\n\nexport default Config;\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "5b7822d0546edfe5b15af123d10ff659aa25a849"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1m77lgt4et = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+
+cov_1m77lgt4et();
+cov_1m77lgt4et().s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+class Config {}
+
+/* istanbul ignore next */
+cov_1m77lgt4et().s[1]++;
+Config.ENVIRONMENT =
+/* istanbul ignore next */
+(cov_1m77lgt4et().b[0][0]++, process.env.ENVIRONMENT) ||
+/* istanbul ignore next */
+(cov_1m77lgt4et().b[0][1]++, 'dev');
+
+/* istanbul ignore next */
+cov_1m77lgt4et().s[2]++;
+Config.SERVERS = {
+  http: {
+    hostname:
+    /* istanbul ignore next */
+    (cov_1m77lgt4et().b[1][0]++, process.env.HOST) ||
+    /* istanbul ignore next */
+    (cov_1m77lgt4et().b[1][1]++, '0.0.0.0'),
+    port:
+    /* istanbul ignore next */
+    (cov_1m77lgt4et().b[2][0]++, Number(process.env.PORT)) ||
+    /* istanbul ignore next */
+    (cov_1m77lgt4et().b[2][1]++, 3001)
+  }
+};
+
+/* istanbul ignore next */
+cov_1m77lgt4et().s[3]++;
+exports.default = Config;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLE1BQU1BLE1BQU4sQ0FBWTs7OztBQUNJQTtBQUFjO0FBQUEsb0NBQU8sQ0FBQ0MsR0FBUixDQUFZQyxXQUFaO0FBQUE7QUFBQSw2QkFBMkIsS0FBM0IsQ0FBZDs7OztBQUVBRixpQkFBVTtFQUN0QkcsSUFBSSxFQUFFO0lBQ0pDLFFBQVE7SUFBRTtJQUFBLG9DQUFPLENBQUNILEdBQVIsQ0FBWUksSUFBWjtJQUFBO0lBQUEsNkJBQW9CLFNBQXBCLENBRE47SUFFSkMsSUFBSTtJQUFFO0lBQUEsbUNBQU0sQ0FBQ0MsT0FBTyxDQUFDTixHQUFSLENBQVlPLElBQWIsQ0FBTjtJQUFBO0lBQUEsNkJBQTRCLElBQTVCO0VBRkY7QUFEZ0IsQ0FBVjs7OztBQVFoQkMsa0JBQWVULE1BQWYiLCJuYW1lcyI6WyJDb25maWciLCJlbnYiLCJFTlZJUk9OTUVOVCIsImh0dHAiLCJob3N0bmFtZSIsIkhPU1QiLCJwb3J0IiwicHJvY2VzcyIsIlBPUlQiLCJleHBvcnRzIl0sInNvdXJjZXMiOlsiL2hvbWUvZmlsaXBwb2lwcG9saXRvcm9kcmlndWVzL8OBcmVhIGRlIFRyYWJhbGhvL01ZUFJPSkVDVFMvc3RyaWRlci9zcmMvY29uZmlnL2FwcC1jb25maWcudHMiXSwic291cmNlc0NvbnRlbnQiOlsiY2xhc3MgQ29uZmlnIHtcbiAgcHVibGljIHN0YXRpYyBFTlZJUk9OTUVOVCA9IHByb2Nlc3MuZW52LkVOVklST05NRU5UIHx8ICdkZXYnO1xuXG4gIHB1YmxpYyBzdGF0aWMgU0VSVkVSUyA9IHtcbiAgICBodHRwOiB7XG4gICAgICBob3N0bmFtZTogcHJvY2Vzcy5lbnYuSE9TVCB8fCAnMC4wLjAuMCcsXG4gICAgICBwb3J0OiBOdW1iZXIocHJvY2Vzcy5lbnYuUE9SVCkgfHwgMzAwMSxcbiAgICB9LFxuICB9O1xufVxuXG5leHBvcnQgZGVmYXVsdCBDb25maWc7XG4iXX0=

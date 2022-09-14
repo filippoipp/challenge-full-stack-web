@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="18" failures="1" errors="0" time="9.027">
+  <testsuite name="Test validation middleware" errors="0" failures="0" skipped="0" timestamp="2022-07-27T22:37:43" time="2.998" tests="9">
+    <testcase classname="Test validation middleware Should call next with error when called validateRequest with object empty" name="Test validation middleware Should call next with error when called validateRequest with object empty" time="0.013">
+    </testcase>
+    <testcase classname="Test validation middleware Should call next with error when called validateRequest with object undefined" name="Test validation middleware Should call next with error when called validateRequest with object undefined" time="0.003">
+    </testcase>
+    <testcase classname="Test validation middleware Should call next with empty when called validateRequest with object valid" name="Test validation middleware Should call next with empty when called validateRequest with object valid" time="0.005">
+    </testcase>
+    <testcase classname="Test validation middleware Should call next with error when called validateParams with object empty" name="Test validation middleware Should call next with error when called validateParams with object empty" time="0.005">
+    </testcase>
+    <testcase classname="Test validation middleware Should call next with empty when called validateParams with object valid" name="Test validation middleware Should call next with empty when called validateParams with object valid" time="0.013">
+    </testcase>
+    <testcase classname="Test validation middleware Should call next with error when called validateQuery with object empty" name="Test validation middleware Should call next with error when called validateQuery with object empty" time="0.004">
+    </testcase>
+    <testcase classname="Test validation middleware Should call next with empty when called validateQuery with object valid" name="Test validation middleware Should call next with empty when called validateQuery with object valid" time="0.003">
+    </testcase>
+    <testcase classname="Test validation middleware Should call next with error when called validateBody with object empty" name="Test validation middleware Should call next with error when called validateBody with object empty" time="0.004">
+    </testcase>
+    <testcase classname="Test validation middleware Should call next with empty when called validateBody with object valid" name="Test validation middleware Should call next with empty when called validateBody with object valid" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test post controller" errors="0" failures="0" skipped="0" timestamp="2022-07-27T22:37:46" time="3.695" tests="2">
+    <testcase classname="Test post controller Should response 200 when call getUser with sucess" name="Test post controller Should response 200 when call getUser with sucess" time="0.005">
+    </testcase>
+    <testcase classname="Test post controller Should return error when call getUser with exception" name="Test post controller Should return error when call getUser with exception" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test post controller" errors="0" failures="0" skipped="0" timestamp="2022-07-27T22:37:50" time="1.21" tests="4">
+    <testcase classname="Test post controller Should response 200 when call getAll with sucess" name="Test post controller Should response 200 when call getAll with sucess" time="0.007">
+    </testcase>
+    <testcase classname="Test post controller Should return error when call getAll with exception" name="Test post controller Should return error when call getAll with exception" time="0.005">
+    </testcase>
+    <testcase classname="Test post controller Should response 201 when call create with sucess" name="Test post controller Should response 201 when call create with sucess" time="0.016">
+    </testcase>
+    <testcase classname="Test post controller Should return error when call create with exception" name="Test post controller Should return error when call create with exception" time="0.006">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test app config" errors="0" failures="0" skipped="0" timestamp="2022-07-27T22:37:51" time="0.05" tests="2">
+    <testcase classname="Test app config Should return the environment variable configuration SERVERS" name="Test app config Should return the environment variable configuration SERVERS" time="0.004">
+    </testcase>
+    <testcase classname="Test app config Should return the default configuration SERVERS" name="Test app config Should return the default configuration SERVERS" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test post repository" errors="0" failures="1" skipped="0" timestamp="2022-07-27T22:37:51" time="0.812" tests="1">
+    <testcase classname="Test post repository Should return created post and pagination with success" name="Test post repository Should return created post and pagination with success" time="0.026">
+      <failure>HttpError: Failed to create post.
+    at PostRepository.create (/home/filippoippolitorodrigues/Área de Trabalho/MYPROJECTS/strider/src/domain/post/repository.ts:85:13)
+    at Object.&lt;anonymous&gt; (/home/filippoippolitorodrigues/Área de Trabalho/MYPROJECTS/strider/src/domain/post/repository.spec.ts:36:42)
+    at Promise.then.completed (/home/filippoippolitorodrigues/Área de Trabalho/MYPROJECTS/strider/node_modules/jest-circus/build/utils.js:391:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/home/filippoippolitorodrigues/Área de Trabalho/MYPROJECTS/strider/node_modules/jest-circus/build/utils.js:316:10)
+    at _callCircusTest (/home/filippoippolitorodrigues/Área de Trabalho/MYPROJECTS/strider/node_modules/jest-circus/build/run.js:218:40)
+    at _runTest (/home/filippoippolitorodrigues/Área de Trabalho/MYPROJECTS/strider/node_modules/jest-circus/build/run.js:155:3)
+    at _runTestsForDescribeBlock (/home/filippoippolitorodrigues/Área de Trabalho/MYPROJECTS/strider/node_modules/jest-circus/build/run.js:66:9)
+    at _runTestsForDescribeBlock (/home/filippoippolitorodrigues/Área de Trabalho/MYPROJECTS/strider/node_modules/jest-circus/build/run.js:60:9)
+    at run (/home/filippoippolitorodrigues/Área de Trabalho/MYPROJECTS/strider/node_modules/jest-circus/build/run.js:25:3)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

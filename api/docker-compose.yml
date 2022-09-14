@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  a_educacao_db:
+    container_name: 'a_educacao_db'
+    image: 'postgres:9.5.3'
+    ports:
+      - '127.0.0.1:5432:5432'
+    volumes:
+      - 'aeducacaopgdata:/var/lib/postgresql/data/'
+
+volumes:
+  aeducacaopgdata:
