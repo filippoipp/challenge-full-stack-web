@@ -8,7 +8,7 @@ import {
 // eslint-disable-next-line import/no-cycle
 
 @Entity('student')
-export default class User {
+export default class Student {
   @PrimaryGeneratedColumn('uuid', { name: 'id' })
   id: string;
 
