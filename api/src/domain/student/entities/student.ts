@@ -5,7 +5,6 @@ import {
   PrimaryGeneratedColumn,
   Column,
 } from 'typeorm';
-// eslint-disable-next-line import/no-cycle
 
 @Entity('student')
 export default class Student {

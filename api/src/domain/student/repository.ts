@@ -13,7 +13,7 @@ export default class StudentRepository {
       const studentRepository = getRepository(Student);
       const student = await studentRepository.save({
         ...studentData,
-        ra: this.generateRa(),
+        ra: await this.generateRa(),
       });
       return student;
     } catch (error) {

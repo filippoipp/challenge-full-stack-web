@@ -4,7 +4,7 @@ import StudentRepository from './repository';
 async function createStudent(req: Request, res: Response, next: NextFunction) {
   try {
     const repository = new StudentRepository();
-    const response = await repository.createStudent(req.query);
+    const response = await repository.createStudent(req.body);
     res.status(201).json(response);
   } catch (error) {
     next(error);
@@ -14,7 +14,7 @@ async function createStudent(req: Request, res: Response, next: NextFunction) {
 async function listStudents(req: Request, res: Response, next: NextFunction) {
   try {
     const repository = new StudentRepository();
-    const response = await repository.listStudents(req.query);
+    const response = await repository.listStudents();
     res.status(200).json(response);
   } catch (error) {
     next(error);
@@ -24,7 +24,7 @@ async function listStudents(req: Request, res: Response, next: NextFunction) {
 async function updateStudent(req: Request, res: Response, next: NextFunction) {
   try {
     const repository = new StudentRepository();
-    const response = await repository.updateStudent(req.query);
+    const response = await repository.updateStudent(req.body, req.params.id);
     res.status(204).json(response);
   } catch (error) {
     next(error);
@@ -34,7 +34,7 @@ async function updateStudent(req: Request, res: Response, next: NextFunction) {
 async function deleteStudent(req: Request, res: Response, next: NextFunction) {
   try {
     const repository = new StudentRepository();
-    const response = await repository.deleteStudent(req.query);
+    const response = await repository.deleteStudent(req.params.id);
     res.status(204).json(response);
   } catch (error) {
     next(error);

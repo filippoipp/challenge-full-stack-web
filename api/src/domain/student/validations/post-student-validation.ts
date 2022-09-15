@@ -10,7 +10,7 @@ const cpfValidate = (value: any, helpers: CustomHelpers) => {
 
 const postStudentBody = {
   name: Joi.string().required(),
-  email: Joi.string().max(14).email().required(),
+  email: Joi.string().email().required(),
   cpf: Joi.string().required().custom(cpfValidate),
 };
 
