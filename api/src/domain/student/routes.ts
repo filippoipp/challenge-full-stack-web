@@ -8,7 +8,7 @@ export default [
     method: 'post',
     path: '/private/v1/student',
     handlers: [
-      authorize,
+      authorize(),
       validateBody(validation.createStudentValidationBody),
       studentController.createStudent,
     ],
@@ -25,7 +25,7 @@ export default [
     method: 'patch',
     path: '/private/v1/student/:id',
     handlers: [
-      authorize,
+      authorize(),
       validateParams(validation.updateStudentValidationParams),
       validateBody(validation.updateStudentValidationBody),
       studentController.updateStudent,
@@ -35,6 +35,7 @@ export default [
     method: 'delete',
     path: '/private/v1/student/:id',
     handlers: [
+      authorize(),
       validateParams(validation.deleteStudentValidationParams),
       studentController.deleteStudent,
     ],

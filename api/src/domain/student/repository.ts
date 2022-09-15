@@ -2,13 +2,16 @@ import { getRepository } from 'typeorm';
 import { studentErrorKeys, studentErrorMessages } from '../../errors/translator/student';
 import HttpError from '../../errors/http-error';
 import Student from './entities/student';
+import CreateStudentRequest from './interfaces/inputs/create-student-dto';
+import CreateStudentResponse from './interfaces/outputs/create-student-dto';
+import UpdateStudentRequest from './interfaces/inputs/update-student-dto';
 
 export default class StudentRepository {
   private async generateRa(): Promise<string> {
     return `${new Date().getFullYear()}${Math.floor(Math.random() * 90000) + 10000}`;
   }
 
-  public async createStudent(studentData: any): Promise<any> {
+  public async createStudent(studentData: CreateStudentRequest): Promise<CreateStudentResponse> {
     try {
       const studentRepository = getRepository(Student);
       const student = await studentRepository.save({
@@ -26,7 +29,7 @@ export default class StudentRepository {
     }
   }
 
-  public async listStudents(): Promise<any> {
+  public async listStudents(): Promise<CreateStudentResponse[]> {
     try {
       const studentRepository = getRepository(Student);
       const students = await studentRepository.find();
@@ -41,7 +44,7 @@ export default class StudentRepository {
     }
   }
 
-  public async updateStudent(studentData: any, studentId: string): Promise<void> {
+  public async updateStudent(studentData: UpdateStudentRequest, studentId: string): Promise<void> {
     try {
       const studentRepository = getRepository(Student);
       await studentRepository.update(studentId, studentData);
