@@ -1,9 +1,15 @@
 import Joi from '@hapi/joi';
 
-const getUserParams = {
-  username: Joi.string().max(14).required(),
+const patchStudentParams = {
+  id: Joi.string().required(),
+};
+
+const patchStudentBody = {
+  nome: Joi.string(),
+  email: Joi.string().email(),
 };
 
 export default {
-  params: Joi.object(getUserParams),
+  params: Joi.object(patchStudentParams),
+  body: Joi.object(patchStudentBody),
 };

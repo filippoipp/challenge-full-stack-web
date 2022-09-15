@@ -1,9 +1,9 @@
 import Joi from '@hapi/joi';
 
-const getUserParams = {
-  username: Joi.string().max(14).required(),
+const deleteStudentParams = {
+  id: Joi.string().required(),
 };
 
 export default {
-  params: Joi.object(getUserParams),
+  params: Joi.object(deleteStudentParams),
 };
