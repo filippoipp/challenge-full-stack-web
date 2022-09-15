@@ -4,17 +4,25 @@ import {
   UpdateDateColumn,
   PrimaryGeneratedColumn,
   Column,
-  OneToMany,
 } from 'typeorm';
 // eslint-disable-next-line import/no-cycle
 
-@Entity('user')
+@Entity('student')
 export default class User {
   @PrimaryGeneratedColumn('uuid', { name: 'id' })
   id: string;
 
-  @Column({ unique: true, length: 14 })
-  username: string;
+  @Column()
+  name: string;
+
+  @Column()
+  email: string;
+
+  @Column({ unique: true })
+  ra: string;
+
+  @Column()
+  cpf: string;
 
   @CreateDateColumn({ name: 'created_at' })
   createdAt: Date;
