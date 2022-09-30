@@ -5,14 +5,17 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 export function generateToken() {
-  const privateKey = fs.readFileSync(path.join(__dirname, './../../../private.key'));
+  const privateKey = {
+    key: fs.readFileSync(path.join(__dirname, '../../private.pem')),
+    passphrase: process.env.AUTH_PASSPHRASE,
+  };
 
   const signInOptions: SignOptions = {
     algorithm: 'RS256',
     expiresIn: '1h',
   };
 
-  return sign(null, privateKey, signInOptions);
+  return sign({}, privateKey, signInOptions);
 }
 
 interface TokenPayload {
@@ -23,7 +26,7 @@ interface TokenPayload {
 }
 
 export function validateToken(token: string): Promise<TokenPayload> {
-  const publicKey = fs.readFileSync(path.join(__dirname, './../../../public.key'));
+  const publicKey = fs.readFileSync(path.join(__dirname, '../../public.pem'));
 
   const verifyOptions: VerifyOptions = {
     algorithms: ['RS256'],

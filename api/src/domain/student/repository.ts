@@ -3,7 +3,6 @@ import { studentErrorKeys, studentErrorMessages } from '../../errors/translator/
 import HttpError from '../../errors/http-error';
 import Student from './entities/student';
 import CreateStudentRequest from './interfaces/inputs/create-student-dto';
-import CreateStudentResponse from './interfaces/outputs/create-student-dto';
 import UpdateStudentRequest from './interfaces/inputs/update-student-dto';
 
 export default class StudentRepository {
@@ -11,7 +10,7 @@ export default class StudentRepository {
     return `${new Date().getFullYear()}${Math.floor(Math.random() * 90000) + 10000}`;
   }
 
-  public async createStudent(studentData: CreateStudentRequest): Promise<CreateStudentResponse> {
+  public async createStudent(studentData: CreateStudentRequest): Promise<Student> {
     try {
       const studentRepository = getRepository(Student);
       const student = await studentRepository.save({
@@ -29,7 +28,7 @@ export default class StudentRepository {
     }
   }
 
-  public async listStudents(): Promise<CreateStudentResponse[]> {
+  public async listStudents(): Promise<Student[]> {
     try {
       const studentRepository = getRepository(Student);
       const students = await studentRepository.find();
