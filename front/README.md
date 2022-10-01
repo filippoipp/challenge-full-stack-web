@@ -1,24 +1,14 @@
-# front
+# 2 - [front-end]
+## Instalação e configuração
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
+Instalando as dependências
+```bash
+$ yarn
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
+Crie o arquivo .env.development na raiz do projeto e copie o conteudo do .env.example para ele
 
-### Lints and fixes files
+Rodando a aplicação
+```bash
+$ yarn serve
 ```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
