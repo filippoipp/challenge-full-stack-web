@@ -1,0 +1,83 @@
+d12584292e16535e6bf2c2e5f0fdd1c3
+"use strict";
+
+/* istanbul ignore next */
+function cov_1n0sy0vtqu() {
+  var path = "/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/challenge-full-stack-web/api/src/errors/translator/student/key.ts";
+  var hash = "5084ca8ac8f18383561c85a703875e24115fc725";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/challenge-full-stack-web/api/src/errors/translator/student/key.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 0
+        },
+        end: {
+          line: 8,
+          column: 2
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/challenge-full-stack-web/api/src/errors/translator/student/key.ts",
+      mappings: ";;AAAA,kBAAe;IACb,mBAAmB,EAAE,aAAa;IAClC,mBAAmB,EAAE,aAAa;IAClC,mBAAmB,EAAE,aAAa;IAClC,qBAAqB,EAAE,aAAa;CACrC,CAAC",
+      names: [],
+      sources: ["/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/challenge-full-stack-web/api/src/errors/translator/student/key.ts"],
+      sourcesContent: ["export default {\n  CREATE_STUDENT_FAIL: 'STUDENT-001',\n  DELETE_STUDENT_FAIL: 'STUDENT-002',\n  UPDATE_STUDENT_FAIL: 'STUDENT-003',\n  GET_ALL_STUDENTS_FAIL: 'STUDENT-005',\n};\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "5084ca8ac8f18383561c85a703875e24115fc725"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1n0sy0vtqu = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+
+cov_1n0sy0vtqu();
+cov_1n0sy0vtqu().s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+/* istanbul ignore next */
+cov_1n0sy0vtqu().s[1]++;
+exports.default = {
+  CREATE_STUDENT_FAIL: 'STUDENT-001',
+  DELETE_STUDENT_FAIL: 'STUDENT-002',
+  UPDATE_STUDENT_FAIL: 'STUDENT-003',
+  GET_ALL_STUDENTS_FAIL: 'STUDENT-005'
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUFBLGtCQUFlO0VBQ2JDLG1CQUFtQixFQUFFLGFBRFI7RUFFYkMsbUJBQW1CLEVBQUUsYUFGUjtFQUdiQyxtQkFBbUIsRUFBRSxhQUhSO0VBSWJDLHFCQUFxQixFQUFFO0FBSlYsQ0FBZiIsIm5hbWVzIjpbImV4cG9ydHMiLCJDUkVBVEVfU1RVREVOVF9GQUlMIiwiREVMRVRFX1NUVURFTlRfRkFJTCIsIlVQREFURV9TVFVERU5UX0ZBSUwiLCJHRVRfQUxMX1NUVURFTlRTX0ZBSUwiXSwic291cmNlcyI6WyIvaG9tZS9maWxpcHBvaXBwb2xpdG9yb2RyaWd1ZXMvw4FyZWEgZGUgVHJhYmFsaG8vTVlQUk9KRUNUUy9jaGFsbGVuZ2UtZnVsbC1zdGFjay13ZWIvYXBpL3NyYy9lcnJvcnMvdHJhbnNsYXRvci9zdHVkZW50L2tleS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZGVmYXVsdCB7XG4gIENSRUFURV9TVFVERU5UX0ZBSUw6ICdTVFVERU5ULTAwMScsXG4gIERFTEVURV9TVFVERU5UX0ZBSUw6ICdTVFVERU5ULTAwMicsXG4gIFVQREFURV9TVFVERU5UX0ZBSUw6ICdTVFVERU5ULTAwMycsXG4gIEdFVF9BTExfU1RVREVOVFNfRkFJTDogJ1NUVURFTlQtMDA1Jyxcbn07XG4iXX0=

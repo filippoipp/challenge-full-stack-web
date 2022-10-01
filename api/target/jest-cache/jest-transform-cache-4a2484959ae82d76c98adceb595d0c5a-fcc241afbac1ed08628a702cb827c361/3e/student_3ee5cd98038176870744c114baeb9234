@@ -1,0 +1,48 @@
+8f710e5d18ce0c62e844e3e30e76308f
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const typeorm_1 = require("typeorm");
+let Student = class Student {
+};
+__decorate([
+    (0, typeorm_1.PrimaryGeneratedColumn)('uuid', { name: 'id' }),
+    __metadata("design:type", String)
+], Student.prototype, "id", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], Student.prototype, "name", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], Student.prototype, "email", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ unique: true }),
+    __metadata("design:type", String)
+], Student.prototype, "ra", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], Student.prototype, "cpf", void 0);
+__decorate([
+    (0, typeorm_1.CreateDateColumn)({ name: 'created_at' }),
+    __metadata("design:type", Date)
+], Student.prototype, "createdAt", void 0);
+__decorate([
+    (0, typeorm_1.UpdateDateColumn)({ name: 'updated_at' }),
+    __metadata("design:type", Date)
+], Student.prototype, "updatedAt", void 0);
+Student = __decorate([
+    (0, typeorm_1.Entity)('student')
+], Student);
+exports.default = Student;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJmaWxlIjoiL2hvbWUvZmlsaXBwb2lwcG9saXRvcm9kcmlndWVzL8OBcmVhIGRlIFRyYWJhbGhvL01ZUFJPSkVDVFMvY2hhbGxlbmdlLWZ1bGwtc3RhY2std2ViL2FwaS9zcmMvZG9tYWluL3N0dWRlbnQvZW50aXRpZXMvc3R1ZGVudC50cyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7OztBQUFBLHFDQU1pQjtBQUdqQixJQUFxQixPQUFPLEdBQTVCLE1BQXFCLE9BQU87Q0FxQjNCLENBQUE7QUFuQkM7SUFEQyxJQUFBLGdDQUFzQixFQUFDLE1BQU0sRUFBRSxFQUFFLElBQUksRUFBRSxJQUFJLEVBQUUsQ0FBQzs7bUNBQ3BDO0FBR1g7SUFEQyxJQUFBLGdCQUFNLEdBQUU7O3FDQUNJO0FBR2I7SUFEQyxJQUFBLGdCQUFNLEdBQUU7O3NDQUNLO0FBR2Q7SUFEQyxJQUFBLGdCQUFNLEVBQUMsRUFBRSxNQUFNLEVBQUUsSUFBSSxFQUFFLENBQUM7O21DQUNkO0FBR1g7SUFEQyxJQUFBLGdCQUFNLEdBQUU7O29DQUNHO0FBR1o7SUFEQyxJQUFBLDBCQUFnQixFQUFDLEVBQUUsSUFBSSxFQUFFLFlBQVksRUFBRSxDQUFDOzhCQUM5QixJQUFJOzBDQUFDO0FBR2hCO0lBREMsSUFBQSwwQkFBZ0IsRUFBQyxFQUFFLElBQUksRUFBRSxZQUFZLEVBQUUsQ0FBQzs4QkFDOUIsSUFBSTswQ0FBQztBQXBCRyxPQUFPO0lBRDNCLElBQUEsZ0JBQU0sRUFBQyxTQUFTLENBQUM7R0FDRyxPQUFPLENBcUIzQjtrQkFyQm9CLE9BQU8iLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvZmlsaXBwb2lwcG9saXRvcm9kcmlndWVzL8OBcmVhIGRlIFRyYWJhbGhvL01ZUFJPSkVDVFMvY2hhbGxlbmdlLWZ1bGwtc3RhY2std2ViL2FwaS9zcmMvZG9tYWluL3N0dWRlbnQvZW50aXRpZXMvc3R1ZGVudC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge1xuICBFbnRpdHksXG4gIENyZWF0ZURhdGVDb2x1bW4sXG4gIFVwZGF0ZURhdGVDb2x1bW4sXG4gIFByaW1hcnlHZW5lcmF0ZWRDb2x1bW4sXG4gIENvbHVtbixcbn0gZnJvbSAndHlwZW9ybSc7XG5cbkBFbnRpdHkoJ3N0dWRlbnQnKVxuZXhwb3J0IGRlZmF1bHQgY2xhc3MgU3R1ZGVudCB7XG4gIEBQcmltYXJ5R2VuZXJhdGVkQ29sdW1uKCd1dWlkJywgeyBuYW1lOiAnaWQnIH0pXG4gIGlkOiBzdHJpbmc7XG5cbiAgQENvbHVtbigpXG4gIG5hbWU6IHN0cmluZztcblxuICBAQ29sdW1uKClcbiAgZW1haWw6IHN0cmluZztcblxuICBAQ29sdW1uKHsgdW5pcXVlOiB0cnVlIH0pXG4gIHJhOiBzdHJpbmc7XG5cbiAgQENvbHVtbigpXG4gIGNwZjogc3RyaW5nO1xuXG4gIEBDcmVhdGVEYXRlQ29sdW1uKHsgbmFtZTogJ2NyZWF0ZWRfYXQnIH0pXG4gIGNyZWF0ZWRBdDogRGF0ZTtcblxuICBAVXBkYXRlRGF0ZUNvbHVtbih7IG5hbWU6ICd1cGRhdGVkX2F0JyB9KVxuICB1cGRhdGVkQXQ6IERhdGU7XG59XG4iXSwidmVyc2lvbiI6M30=

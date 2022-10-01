@@ -1,0 +1,80 @@
+4150649d98eaac4cc222d840b6426fc3
+"use strict";
+
+/* istanbul ignore next */
+function cov_dhpsg3ctv() {
+  var path = "/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/challenge-full-stack-web/api/src/errors/translator/auth/key.ts";
+  var hash = "ff5c6e601e4342bbecd00bc8bb37ad2d9e4c4822";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/challenge-full-stack-web/api/src/errors/translator/auth/key.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 0
+        },
+        end: {
+          line: 5,
+          column: 2
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/challenge-full-stack-web/api/src/errors/translator/auth/key.ts",
+      mappings: ";;AAAA,kBAAe;IACb,iBAAiB,EAAE,UAAU;CAC9B,CAAC",
+      names: [],
+      sources: ["/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/challenge-full-stack-web/api/src/errors/translator/auth/key.ts"],
+      sourcesContent: ["export default {\n  CREATE_TOKEN_FAIL: 'AUTH-001',\n};\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "ff5c6e601e4342bbecd00bc8bb37ad2d9e4c4822"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_dhpsg3ctv = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+
+cov_dhpsg3ctv();
+cov_dhpsg3ctv().s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+/* istanbul ignore next */
+cov_dhpsg3ctv().s[1]++;
+exports.default = {
+  CREATE_TOKEN_FAIL: 'AUTH-001'
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUFBLGtCQUFlO0VBQ2JDLGlCQUFpQixFQUFFO0FBRE4sQ0FBZiIsIm5hbWVzIjpbImV4cG9ydHMiLCJDUkVBVEVfVE9LRU5fRkFJTCJdLCJzb3VyY2VzIjpbIi9ob21lL2ZpbGlwcG9pcHBvbGl0b3JvZHJpZ3Vlcy/DgXJlYSBkZSBUcmFiYWxoby9NWVBST0pFQ1RTL2NoYWxsZW5nZS1mdWxsLXN0YWNrLXdlYi9hcGkvc3JjL2Vycm9ycy90cmFuc2xhdG9yL2F1dGgva2V5LnRzIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IHtcbiAgQ1JFQVRFX1RPS0VOX0ZBSUw6ICdBVVRILTAwMScsXG59O1xuIl19

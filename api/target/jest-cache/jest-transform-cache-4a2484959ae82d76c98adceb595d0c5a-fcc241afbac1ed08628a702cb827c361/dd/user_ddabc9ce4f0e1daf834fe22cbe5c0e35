@@ -1,0 +1,85 @@
+59b48554068b7cd3ac9a62aa75b2892b
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const typeorm_1 = require("typeorm");
+const bcrypt = __importStar(require("bcryptjs"));
+let User = class User extends typeorm_1.BaseEntity {
+    async hashPassword() {
+        if (this.password) {
+            this.password = await bcrypt.hash(this.password, 8);
+        }
+    }
+    async validatePassword(password) {
+        const isValid = await bcrypt.compare(password, this.password);
+        return isValid;
+    }
+};
+__decorate([
+    (0, typeorm_1.PrimaryGeneratedColumn)('uuid', { name: 'id' }),
+    __metadata("design:type", String)
+], User.prototype, "id", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ unique: true }),
+    __metadata("design:type", String)
+], User.prototype, "email", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], User.prototype, "name", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], User.prototype, "password", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ name: 'created_at' }),
+    (0, typeorm_1.CreateDateColumn)(),
+    __metadata("design:type", Date)
+], User.prototype, "createdAt", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ name: 'updated_at' }),
+    (0, typeorm_1.UpdateDateColumn)(),
+    __metadata("design:type", Date)
+], User.prototype, "updatedAt", void 0);
+__decorate([
+    (0, typeorm_1.BeforeInsert)(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], User.prototype, "hashPassword", null);
+User = __decorate([
+    (0, typeorm_1.Entity)()
+], User);
+exports.default = User;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJmaWxlIjoiL2hvbWUvZmlsaXBwb2lwcG9saXRvcm9kcmlndWVzL8OBcmVhIGRlIFRyYWJhbGhvL01ZUFJPSkVDVFMvY2hhbGxlbmdlLWZ1bGwtc3RhY2std2ViL2FwaS9zcmMvZG9tYWluL3VzZXIvZW50aXRpZXMvdXNlci50cyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEscUNBUWlCO0FBQ2pCLGlEQUFtQztBQUduQyxJQUFxQixJQUFJLEdBQXpCLE1BQXFCLElBQUssU0FBUSxvQkFBVTtJQXNCMUMsS0FBSyxDQUFDLFlBQVk7UUFDaEIsSUFBSSxJQUFJLENBQUMsUUFBUSxFQUFFO1lBQ2pCLElBQUksQ0FBQyxRQUFRLEdBQUcsTUFBTSxNQUFNLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxRQUFRLEVBQUUsQ0FBQyxDQUFDLENBQUM7U0FDckQ7SUFDSCxDQUFDO0lBRUQsS0FBSyxDQUFDLGdCQUFnQixDQUFDLFFBQWdCO1FBQ3JDLE1BQU0sT0FBTyxHQUFHLE1BQU0sTUFBTSxDQUFDLE9BQU8sQ0FBQyxRQUFRLEVBQUUsSUFBSSxDQUFDLFFBQVEsQ0FBQyxDQUFDO1FBQzlELE9BQU8sT0FBTyxDQUFDO0lBQ2pCLENBQUM7Q0FDRixDQUFBO0FBOUJDO0lBREMsSUFBQSxnQ0FBc0IsRUFBQyxNQUFNLEVBQUUsRUFBRSxJQUFJLEVBQUUsSUFBSSxFQUFFLENBQUM7O2dDQUNwQztBQUdYO0lBREMsSUFBQSxnQkFBTSxFQUFDLEVBQUUsTUFBTSxFQUFFLElBQUksRUFBRSxDQUFDOzttQ0FDWDtBQUdkO0lBREMsSUFBQSxnQkFBTSxHQUFFOztrQ0FDSTtBQUdiO0lBREMsSUFBQSxnQkFBTSxHQUFFOztzQ0FDUTtBQUlqQjtJQUZDLElBQUEsZ0JBQU0sRUFBQyxFQUFFLElBQUksRUFBRSxZQUFZLEVBQUUsQ0FBQztJQUM5QixJQUFBLDBCQUFnQixHQUFFOzhCQUNSLElBQUk7dUNBQUM7QUFJaEI7SUFGQyxJQUFBLGdCQUFNLEVBQUMsRUFBRSxJQUFJLEVBQUUsWUFBWSxFQUFFLENBQUM7SUFDOUIsSUFBQSwwQkFBZ0IsR0FBRTs4QkFDUixJQUFJO3VDQUFDO0FBR2hCO0lBREMsSUFBQSxzQkFBWSxHQUFFOzs7O3dDQUtkO0FBMUJrQixJQUFJO0lBRHhCLElBQUEsZ0JBQU0sR0FBRTtHQUNZLElBQUksQ0FnQ3hCO2tCQWhDb0IsSUFBSSIsIm5hbWVzIjpbXSwic291cmNlcyI6WyIvaG9tZS9maWxpcHBvaXBwb2xpdG9yb2RyaWd1ZXMvw4FyZWEgZGUgVHJhYmFsaG8vTVlQUk9KRUNUUy9jaGFsbGVuZ2UtZnVsbC1zdGFjay13ZWIvYXBpL3NyYy9kb21haW4vdXNlci9lbnRpdGllcy91c2VyLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7XG4gIEJhc2VFbnRpdHksXG4gIEJlZm9yZUluc2VydCxcbiAgQ29sdW1uLFxuICBDcmVhdGVEYXRlQ29sdW1uLFxuICBFbnRpdHksXG4gIFByaW1hcnlHZW5lcmF0ZWRDb2x1bW4sXG4gIFVwZGF0ZURhdGVDb2x1bW4sXG59IGZyb20gJ3R5cGVvcm0nO1xuaW1wb3J0ICogYXMgYmNyeXB0IGZyb20gJ2JjcnlwdGpzJztcblxuQEVudGl0eSgpXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBVc2VyIGV4dGVuZHMgQmFzZUVudGl0eSB7XG4gIEBQcmltYXJ5R2VuZXJhdGVkQ29sdW1uKCd1dWlkJywgeyBuYW1lOiAnaWQnIH0pXG4gIGlkOiBzdHJpbmc7XG5cbiAgQENvbHVtbih7IHVuaXF1ZTogdHJ1ZSB9KVxuICBlbWFpbDogc3RyaW5nO1xuXG4gIEBDb2x1bW4oKVxuICBuYW1lOiBzdHJpbmc7XG5cbiAgQENvbHVtbigpXG4gIHBhc3N3b3JkOiBzdHJpbmc7XG5cbiAgQENvbHVtbih7IG5hbWU6ICdjcmVhdGVkX2F0JyB9KVxuICBAQ3JlYXRlRGF0ZUNvbHVtbigpXG4gIGNyZWF0ZWRBdDogRGF0ZTtcblxuICBAQ29sdW1uKHsgbmFtZTogJ3VwZGF0ZWRfYXQnIH0pXG4gIEBVcGRhdGVEYXRlQ29sdW1uKClcbiAgdXBkYXRlZEF0OiBEYXRlO1xuXG4gIEBCZWZvcmVJbnNlcnQoKVxuICBhc3luYyBoYXNoUGFzc3dvcmQoKSB7XG4gICAgaWYgKHRoaXMucGFzc3dvcmQpIHtcbiAgICAgIHRoaXMucGFzc3dvcmQgPSBhd2FpdCBiY3J5cHQuaGFzaCh0aGlzLnBhc3N3b3JkLCA4KTtcbiAgICB9XG4gIH1cblxuICBhc3luYyB2YWxpZGF0ZVBhc3N3b3JkKHBhc3N3b3JkOiBzdHJpbmcpOiBQcm9taXNlPGJvb2xlYW4+IHtcbiAgICBjb25zdCBpc1ZhbGlkID0gYXdhaXQgYmNyeXB0LmNvbXBhcmUocGFzc3dvcmQsIHRoaXMucGFzc3dvcmQpO1xuICAgIHJldHVybiBpc1ZhbGlkO1xuICB9XG59XG4iXSwidmVyc2lvbiI6M30=

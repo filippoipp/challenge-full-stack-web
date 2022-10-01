@@ -1,0 +1,81 @@
+31a3f9c4da51935bdc4ce97718afd7db
+"use strict";
+
+/* istanbul ignore next */
+function cov_jp48jy7tn() {
+  var path = "/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/challenge-full-stack-web/api/src/errors/translator/user/key.ts";
+  var hash = "1f8ae27e7d6284ddc8afcd5c7a90350ef3fad48d";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/challenge-full-stack-web/api/src/errors/translator/user/key.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 0
+        },
+        end: {
+          line: 6,
+          column: 2
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/challenge-full-stack-web/api/src/errors/translator/user/key.ts",
+      mappings: ";;AAAA,kBAAe;IACb,gBAAgB,EAAE,UAAU;IAC5B,cAAc,EAAE,UAAU;CAC3B,CAAC",
+      names: [],
+      sources: ["/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/challenge-full-stack-web/api/src/errors/translator/user/key.ts"],
+      sourcesContent: ["export default {\n  CREATE_USER_FAIL: 'USER-001',\n  FIND_USER_FAIL: 'USER-002',\n};\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "1f8ae27e7d6284ddc8afcd5c7a90350ef3fad48d"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_jp48jy7tn = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+
+cov_jp48jy7tn();
+cov_jp48jy7tn().s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+/* istanbul ignore next */
+cov_jp48jy7tn().s[1]++;
+exports.default = {
+  CREATE_USER_FAIL: 'USER-001',
+  FIND_USER_FAIL: 'USER-002'
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUFBLGtCQUFlO0VBQ2JDLGdCQUFnQixFQUFFLFVBREw7RUFFYkMsY0FBYyxFQUFFO0FBRkgsQ0FBZiIsIm5hbWVzIjpbImV4cG9ydHMiLCJDUkVBVEVfVVNFUl9GQUlMIiwiRklORF9VU0VSX0ZBSUwiXSwic291cmNlcyI6WyIvaG9tZS9maWxpcHBvaXBwb2xpdG9yb2RyaWd1ZXMvw4FyZWEgZGUgVHJhYmFsaG8vTVlQUk9KRUNUUy9jaGFsbGVuZ2UtZnVsbC1zdGFjay13ZWIvYXBpL3NyYy9lcnJvcnMvdHJhbnNsYXRvci91c2VyL2tleS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZGVmYXVsdCB7XG4gIENSRUFURV9VU0VSX0ZBSUw6ICdVU0VSLTAwMScsXG4gIEZJTkRfVVNFUl9GQUlMOiAnVVNFUi0wMDInLFxufTtcbiJdfQ==

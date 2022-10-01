@@ -1,60 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="18" failures="1" errors="0" time="9.027">
-  <testsuite name="Test validation middleware" errors="0" failures="0" skipped="0" timestamp="2022-07-27T22:37:43" time="2.998" tests="9">
-    <testcase classname="Test validation middleware Should call next with error when called validateRequest with object empty" name="Test validation middleware Should call next with error when called validateRequest with object empty" time="0.013">
+<testsuites name="jest tests" tests="23" failures="0" errors="0" time="6.507">
+  <testsuite name="Test auth controller" errors="0" failures="0" skipped="0" timestamp="2022-10-01T18:29:35" time="3.843" tests="2">
+    <testcase classname="Test auth controller Should response 201 when call createToken with sucess" name="Test auth controller Should response 201 when call createToken with sucess" time="0.009">
+    </testcase>
+    <testcase classname="Test auth controller Should return error when call createToken with exception" name="Test auth controller Should return error when call createToken with exception" time="0.006">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test student controller" errors="0" failures="0" skipped="0" timestamp="2022-10-01T18:29:39" time="0.727" tests="8">
+    <testcase classname="Test student controller Should response 200 when call listStudents with sucess" name="Test student controller Should response 200 when call listStudents with sucess" time="0.006">
+    </testcase>
+    <testcase classname="Test student controller Should return error when call getUser with exception" name="Test student controller Should return error when call getUser with exception" time="0.005">
+    </testcase>
+    <testcase classname="Test student controller Should response 201 when call createStudent with sucess" name="Test student controller Should response 201 when call createStudent with sucess" time="0.006">
+    </testcase>
+    <testcase classname="Test student controller Should return error when call createStudent with exception" name="Test student controller Should return error when call createStudent with exception" time="0.017">
+    </testcase>
+    <testcase classname="Test student controller Should response 204 when call deleteStudent with sucess" name="Test student controller Should response 204 when call deleteStudent with sucess" time="0.011">
+    </testcase>
+    <testcase classname="Test student controller Should return error when call deleteStudent with exception" name="Test student controller Should return error when call deleteStudent with exception" time="0.01">
+    </testcase>
+    <testcase classname="Test student controller Should response 204 when call updateStudent with sucess" name="Test student controller Should response 204 when call updateStudent with sucess" time="0.01">
+    </testcase>
+    <testcase classname="Test student controller Should return error when call updateStudent with exception" name="Test student controller Should return error when call updateStudent with exception" time="0.01">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test user controller" errors="0" failures="0" skipped="0" timestamp="2022-10-01T18:29:40" time="0.607" tests="2">
+    <testcase classname="Test user controller Should response 201 when call createUser with sucess" name="Test user controller Should response 201 when call createUser with sucess" time="0.004">
+    </testcase>
+    <testcase classname="Test user controller Should return error when call createUser with exception" name="Test user controller Should return error when call createUser with exception" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test validation middleware" errors="0" failures="0" skipped="0" timestamp="2022-10-01T18:29:40" time="0.14" tests="9">
+    <testcase classname="Test validation middleware Should call next with error when called validateRequest with object empty" name="Test validation middleware Should call next with error when called validateRequest with object empty" time="0.005">
     </testcase>
     <testcase classname="Test validation middleware Should call next with error when called validateRequest with object undefined" name="Test validation middleware Should call next with error when called validateRequest with object undefined" time="0.003">
     </testcase>
-    <testcase classname="Test validation middleware Should call next with empty when called validateRequest with object valid" name="Test validation middleware Should call next with empty when called validateRequest with object valid" time="0.005">
+    <testcase classname="Test validation middleware Should call next with empty when called validateRequest with object valid" name="Test validation middleware Should call next with empty when called validateRequest with object valid" time="0.004">
     </testcase>
-    <testcase classname="Test validation middleware Should call next with error when called validateParams with object empty" name="Test validation middleware Should call next with error when called validateParams with object empty" time="0.005">
+    <testcase classname="Test validation middleware Should call next with error when called validateParams with object empty" name="Test validation middleware Should call next with error when called validateParams with object empty" time="0.003">
     </testcase>
-    <testcase classname="Test validation middleware Should call next with empty when called validateParams with object valid" name="Test validation middleware Should call next with empty when called validateParams with object valid" time="0.013">
+    <testcase classname="Test validation middleware Should call next with empty when called validateParams with object valid" name="Test validation middleware Should call next with empty when called validateParams with object valid" time="0.01">
     </testcase>
-    <testcase classname="Test validation middleware Should call next with error when called validateQuery with object empty" name="Test validation middleware Should call next with error when called validateQuery with object empty" time="0.004">
+    <testcase classname="Test validation middleware Should call next with error when called validateQuery with object empty" name="Test validation middleware Should call next with error when called validateQuery with object empty" time="0.003">
     </testcase>
-    <testcase classname="Test validation middleware Should call next with empty when called validateQuery with object valid" name="Test validation middleware Should call next with empty when called validateQuery with object valid" time="0.003">
+    <testcase classname="Test validation middleware Should call next with empty when called validateQuery with object valid" name="Test validation middleware Should call next with empty when called validateQuery with object valid" time="0.002">
     </testcase>
-    <testcase classname="Test validation middleware Should call next with error when called validateBody with object empty" name="Test validation middleware Should call next with error when called validateBody with object empty" time="0.004">
+    <testcase classname="Test validation middleware Should call next with error when called validateBody with object empty" name="Test validation middleware Should call next with error when called validateBody with object empty" time="0.003">
     </testcase>
-    <testcase classname="Test validation middleware Should call next with empty when called validateBody with object valid" name="Test validation middleware Should call next with empty when called validateBody with object valid" time="0.004">
-    </testcase>
-  </testsuite>
-  <testsuite name="Test post controller" errors="0" failures="0" skipped="0" timestamp="2022-07-27T22:37:46" time="3.695" tests="2">
-    <testcase classname="Test post controller Should response 200 when call getUser with sucess" name="Test post controller Should response 200 when call getUser with sucess" time="0.005">
-    </testcase>
-    <testcase classname="Test post controller Should return error when call getUser with exception" name="Test post controller Should return error when call getUser with exception" time="0.005">
+    <testcase classname="Test validation middleware Should call next with empty when called validateBody with object valid" name="Test validation middleware Should call next with empty when called validateBody with object valid" time="0.003">
     </testcase>
   </testsuite>
-  <testsuite name="Test post controller" errors="0" failures="0" skipped="0" timestamp="2022-07-27T22:37:50" time="1.21" tests="4">
-    <testcase classname="Test post controller Should response 200 when call getAll with sucess" name="Test post controller Should response 200 when call getAll with sucess" time="0.007">
+  <testsuite name="Test app config" errors="0" failures="0" skipped="0" timestamp="2022-10-01T18:29:41" time="0.048" tests="2">
+    <testcase classname="Test app config Should return the environment variable configuration SERVERS" name="Test app config Should return the environment variable configuration SERVERS" time="0.005">
     </testcase>
-    <testcase classname="Test post controller Should return error when call getAll with exception" name="Test post controller Should return error when call getAll with exception" time="0.005">
-    </testcase>
-    <testcase classname="Test post controller Should response 201 when call create with sucess" name="Test post controller Should response 201 when call create with sucess" time="0.016">
-    </testcase>
-    <testcase classname="Test post controller Should return error when call create with exception" name="Test post controller Should return error when call create with exception" time="0.006">
-    </testcase>
-  </testsuite>
-  <testsuite name="Test app config" errors="0" failures="0" skipped="0" timestamp="2022-07-27T22:37:51" time="0.05" tests="2">
-    <testcase classname="Test app config Should return the environment variable configuration SERVERS" name="Test app config Should return the environment variable configuration SERVERS" time="0.004">
-    </testcase>
-    <testcase classname="Test app config Should return the default configuration SERVERS" name="Test app config Should return the default configuration SERVERS" time="0.003">
-    </testcase>
-  </testsuite>
-  <testsuite name="Test post repository" errors="0" failures="1" skipped="0" timestamp="2022-07-27T22:37:51" time="0.812" tests="1">
-    <testcase classname="Test post repository Should return created post and pagination with success" name="Test post repository Should return created post and pagination with success" time="0.026">
-      <failure>HttpError: Failed to create post.
-    at PostRepository.create (/home/filippoippolitorodrigues/Área de Trabalho/MYPROJECTS/strider/src/domain/post/repository.ts:85:13)
-    at Object.&lt;anonymous&gt; (/home/filippoippolitorodrigues/Área de Trabalho/MYPROJECTS/strider/src/domain/post/repository.spec.ts:36:42)
-    at Promise.then.completed (/home/filippoippolitorodrigues/Área de Trabalho/MYPROJECTS/strider/node_modules/jest-circus/build/utils.js:391:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (/home/filippoippolitorodrigues/Área de Trabalho/MYPROJECTS/strider/node_modules/jest-circus/build/utils.js:316:10)
-    at _callCircusTest (/home/filippoippolitorodrigues/Área de Trabalho/MYPROJECTS/strider/node_modules/jest-circus/build/run.js:218:40)
-    at _runTest (/home/filippoippolitorodrigues/Área de Trabalho/MYPROJECTS/strider/node_modules/jest-circus/build/run.js:155:3)
-    at _runTestsForDescribeBlock (/home/filippoippolitorodrigues/Área de Trabalho/MYPROJECTS/strider/node_modules/jest-circus/build/run.js:66:9)
-    at _runTestsForDescribeBlock (/home/filippoippolitorodrigues/Área de Trabalho/MYPROJECTS/strider/node_modules/jest-circus/build/run.js:60:9)
-    at run (/home/filippoippolitorodrigues/Área de Trabalho/MYPROJECTS/strider/node_modules/jest-circus/build/run.js:25:3)</failure>
+    <testcase classname="Test app config Should return the default configuration SERVERS" name="Test app config Should return the default configuration SERVERS" time="0.004">
     </testcase>
   </testsuite>
 </testsuites>

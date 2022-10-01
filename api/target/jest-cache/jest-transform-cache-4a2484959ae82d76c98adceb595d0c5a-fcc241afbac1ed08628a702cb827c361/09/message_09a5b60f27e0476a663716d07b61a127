@@ -1,0 +1,80 @@
+828e0a16589b1e1ee8c46c51f0279efd
+"use strict";
+
+/* istanbul ignore next */
+function cov_25why4hfbj() {
+  var path = "/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/challenge-full-stack-web/api/src/errors/translator/auth/message.ts";
+  var hash = "fac92b54c0a13a35bc614377436955b27c6c14d9";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/challenge-full-stack-web/api/src/errors/translator/auth/message.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 0
+        },
+        end: {
+          line: 5,
+          column: 2
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/challenge-full-stack-web/api/src/errors/translator/auth/message.ts",
+      mappings: ";;AAAA,kBAAe;IACb,UAAU,EAAE,yBAAyB;CACtC,CAAC",
+      names: [],
+      sources: ["/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/challenge-full-stack-web/api/src/errors/translator/auth/message.ts"],
+      sourcesContent: ["export default {\n  'AUTH-001': 'Failed to create token.',\n};\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "fac92b54c0a13a35bc614377436955b27c6c14d9"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_25why4hfbj = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+
+cov_25why4hfbj();
+cov_25why4hfbj().s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+/* istanbul ignore next */
+cov_25why4hfbj().s[1]++;
+exports.default = {
+  'AUTH-001': 'Failed to create token.'
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUFBLGtCQUFlO0VBQ2IsWUFBWTtBQURDLENBQWYiLCJuYW1lcyI6WyJleHBvcnRzIl0sInNvdXJjZXMiOlsiL2hvbWUvZmlsaXBwb2lwcG9saXRvcm9kcmlndWVzL8OBcmVhIGRlIFRyYWJhbGhvL01ZUFJPSkVDVFMvY2hhbGxlbmdlLWZ1bGwtc3RhY2std2ViL2FwaS9zcmMvZXJyb3JzL3RyYW5zbGF0b3IvYXV0aC9tZXNzYWdlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IHtcbiAgJ0FVVEgtMDAxJzogJ0ZhaWxlZCB0byBjcmVhdGUgdG9rZW4uJyxcbn07XG4iXX0=

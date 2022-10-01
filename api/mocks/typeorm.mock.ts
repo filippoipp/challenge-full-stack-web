@@ -11,6 +11,7 @@ jest.mock('typeorm', () => ({
   getRepository: () => repositoryMock,
   getConnection: () => connectionMock,
 
+  BaseEntity: () => { },
   Entity: () => () => { },
   PrimaryColumn: () => () => { },
   PrimaryGeneratedColumn: () => () => { },

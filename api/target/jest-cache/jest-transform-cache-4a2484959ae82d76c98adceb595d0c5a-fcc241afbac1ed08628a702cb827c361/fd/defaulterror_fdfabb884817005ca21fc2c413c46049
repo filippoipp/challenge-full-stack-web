@@ -1,0 +1,295 @@
+49f96cc227f9efba4db04cbe2a9064e5
+"use strict";
+
+/* istanbul ignore next */
+function cov_2prcpmp2sy() {
+  var path = "/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/challenge-full-stack-web/api/src/errors/default-error.ts";
+  var hash = "4f3a03ac81419469207beed1996fa069d6b04a35";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/challenge-full-stack-web/api/src/errors/default-error.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 5,
+          column: 8
+        },
+        end: {
+          line: 5,
+          column: 23
+        }
+      },
+      "2": {
+        start: {
+          line: 6,
+          column: 8
+        },
+        end: {
+          line: 6,
+          column: 25
+        }
+      },
+      "3": {
+        start: {
+          line: 7,
+          column: 8
+        },
+        end: {
+          line: 7,
+          column: 56
+        }
+      },
+      "4": {
+        start: {
+          line: 8,
+          column: 8
+        },
+        end: {
+          line: 8,
+          column: 42
+        }
+      },
+      "5": {
+        start: {
+          line: 9,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 9
+        }
+      },
+      "6": {
+        start: {
+          line: 10,
+          column: 12
+        },
+        end: {
+          line: 10,
+          column: 98
+        }
+      },
+      "7": {
+        start: {
+          line: 12,
+          column: 8
+        },
+        end: {
+          line: 12,
+          column: 25
+        }
+      },
+      "8": {
+        start: {
+          line: 15,
+          column: 0
+        },
+        end: {
+          line: 15,
+          column: 31
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 4,
+            column: 4
+          },
+          end: {
+            line: 4,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 4,
+            column: 38
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        line: 4
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 9,
+            column: 8
+          },
+          end: {
+            line: 11,
+            column: 9
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 9,
+            column: 8
+          },
+          end: {
+            line: 11,
+            column: 9
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 9
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 9,
+            column: 12
+          },
+          end: {
+            line: 9,
+            column: 32
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 9,
+            column: 12
+          },
+          end: {
+            line: 9,
+            column: 17
+          }
+        }, {
+          start: {
+            line: 9,
+            column: 21
+          },
+          end: {
+            line: 9,
+            column: 32
+          }
+        }],
+        line: 9
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0],
+      "1": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/challenge-full-stack-web/api/src/errors/default-error.ts",
+      mappings: ";;AAAA,MAAqB,YAAa,SAAQ,KAAK;IAG7C,YAAY,OAAe,EAAE,IAAY,EAAE,KAAa;QACtD,KAAK,CAAC,OAAO,CAAC,CAAC;QAHV,SAAI,GAAW,IAAI,CAAC;QAKzB,KAAK,CAAC,iBAAiB,CAAC,IAAI,EAAE,IAAI,CAAC,WAAW,CAAC,CAAC;QAChD,IAAI,CAAC,IAAI,GAAG,IAAI,CAAC,WAAW,CAAC,IAAI,CAAC;QAClC,IAAI,KAAK,IAAI,KAAK,CAAC,KAAK,EAAE;YACxB,IAAI,CAAC,KAAK,GAAG,GAAG,IAAI,CAAC,KAAK,KAAK,KAAK,CAAC,KAAK,CAAC,SAAS,CAAC,KAAK,CAAC,KAAK,CAAC,OAAO,CAAC,IAAI,CAAC,GAAG,CAAC,CAAC,EAAE,CAAC;SACvF;QACD,IAAI,CAAC,IAAI,GAAG,IAAI,CAAC;IACnB,CAAC;CACF;AAbD,+BAaC",
+      names: [],
+      sources: ["/home/filippoippolitorodrigues/\xC1rea de Trabalho/MYPROJECTS/challenge-full-stack-web/api/src/errors/default-error.ts"],
+      sourcesContent: ["export default class DefaultError extends Error {\r\n  public code: string = null;\r\n\r\n  constructor(message: string, code: string, error?: Error) {\r\n    super(message);\r\n\r\n    Error.captureStackTrace(this, this.constructor);\r\n    this.name = this.constructor.name;\r\n    if (error && error.stack) {\r\n      this.stack = `${this.stack}\\n${error.stack.substring(error.stack.indexOf('\\n') + 1)}`;\r\n    }\r\n    this.code = code;\r\n  }\r\n}\r\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "4f3a03ac81419469207beed1996fa069d6b04a35"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2prcpmp2sy = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+
+cov_2prcpmp2sy();
+cov_2prcpmp2sy().s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+class DefaultError extends Error {
+  constructor(message, code, error) {
+    /* istanbul ignore next */
+    cov_2prcpmp2sy().f[0]++;
+    cov_2prcpmp2sy().s[1]++;
+    super(message);
+
+    /* istanbul ignore next */
+    cov_2prcpmp2sy().s[2]++;
+    this.code = null;
+
+    /* istanbul ignore next */
+    cov_2prcpmp2sy().s[3]++;
+    Error.captureStackTrace(this, this.constructor);
+
+    /* istanbul ignore next */
+    cov_2prcpmp2sy().s[4]++;
+    this.name = this.constructor.name;
+
+    /* istanbul ignore next */
+    cov_2prcpmp2sy().s[5]++;
+
+    if (
+    /* istanbul ignore next */
+    (cov_2prcpmp2sy().b[1][0]++, error) &&
+    /* istanbul ignore next */
+    (cov_2prcpmp2sy().b[1][1]++, error.stack)) {
+      /* istanbul ignore next */
+      cov_2prcpmp2sy().b[0][0]++;
+      cov_2prcpmp2sy().s[6]++;
+      this.stack = `${this.stack}\n${error.stack.substring(error.stack.indexOf('\n') + 1)}`;
+    } else
+    /* istanbul ignore next */
+    {
+      cov_2prcpmp2sy().b[0][1]++;
+    }
+
+    cov_2prcpmp2sy().s[7]++;
+    this.code = code;
+  }
+
+}
+
+/* istanbul ignore next */
+cov_2prcpmp2sy().s[8]++;
+exports.default = DefaultError;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLE1BQXFCQSxZQUFyQixTQUEwQ0MsS0FBMUMsQ0FBK0M7RUFHN0NDLFlBQVlDLE9BQVosRUFBNkJDLElBQTdCLEVBQTJDQyxLQUEzQyxFQUF3RDtJQUFBO0lBQUE7SUFBQTtJQUN0RCxNQUFNRixPQUFOOztJQURzRDtJQUFBO0lBRmpELFlBQWUsSUFBZjs7SUFFaUQ7SUFBQTtJQUd0REYsS0FBSyxDQUFDSyxpQkFBTixDQUF3QixJQUF4QixFQUE4QixLQUFLSixXQUFuQzs7SUFIc0Q7SUFBQTtJQUl0RCxLQUFLSyxJQUFMLEdBQVksS0FBS0wsV0FBTCxDQUFpQkssSUFBN0I7O0lBSnNEO0lBQUE7O0lBS3REO0lBQUk7SUFBQSxrQ0FBSztJQUFBO0lBQUEsNkJBQUlGLEtBQUssQ0FBQ0csS0FBVixDQUFULEVBQTBCO01BQUE7TUFBQTtNQUFBO01BQ3hCLEtBQUtBLEtBQUwsR0FBYSxHQUFHLEtBQUtBLEtBQUssS0FBS0gsS0FBSyxDQUFDRyxLQUFOLENBQVlDLFNBQVosQ0FBc0JKLEtBQUssQ0FBQ0csS0FBTixDQUFZRSxPQUFaLENBQW9CLElBQXBCLElBQTRCLENBQWxELENBQW9ELEVBQW5GO0lBQ0QsQ0FGRDtJQUFBO0lBQUE7TUFBQTtJQUFBOztJQUxzRDtJQVF0RCxLQUFLTixJQUFMLEdBQVlBLElBQVo7RUFDRDs7QUFaNEM7Ozs7QUFBL0NPIiwibmFtZXMiOlsiRGVmYXVsdEVycm9yIiwiRXJyb3IiLCJjb25zdHJ1Y3RvciIsIm1lc3NhZ2UiLCJjb2RlIiwiZXJyb3IiLCJjYXB0dXJlU3RhY2tUcmFjZSIsIm5hbWUiLCJzdGFjayIsInN1YnN0cmluZyIsImluZGV4T2YiLCJleHBvcnRzIl0sInNvdXJjZXMiOlsiL2hvbWUvZmlsaXBwb2lwcG9saXRvcm9kcmlndWVzL8OBcmVhIGRlIFRyYWJhbGhvL01ZUFJPSkVDVFMvY2hhbGxlbmdlLWZ1bGwtc3RhY2std2ViL2FwaS9zcmMvZXJyb3JzL2RlZmF1bHQtZXJyb3IudHMiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGRlZmF1bHQgY2xhc3MgRGVmYXVsdEVycm9yIGV4dGVuZHMgRXJyb3Ige1xyXG4gIHB1YmxpYyBjb2RlOiBzdHJpbmcgPSBudWxsO1xyXG5cclxuICBjb25zdHJ1Y3RvcihtZXNzYWdlOiBzdHJpbmcsIGNvZGU6IHN0cmluZywgZXJyb3I/OiBFcnJvcikge1xyXG4gICAgc3VwZXIobWVzc2FnZSk7XHJcblxyXG4gICAgRXJyb3IuY2FwdHVyZVN0YWNrVHJhY2UodGhpcywgdGhpcy5jb25zdHJ1Y3Rvcik7XHJcbiAgICB0aGlzLm5hbWUgPSB0aGlzLmNvbnN0cnVjdG9yLm5hbWU7XHJcbiAgICBpZiAoZXJyb3IgJiYgZXJyb3Iuc3RhY2spIHtcclxuICAgICAgdGhpcy5zdGFjayA9IGAke3RoaXMuc3RhY2t9XFxuJHtlcnJvci5zdGFjay5zdWJzdHJpbmcoZXJyb3Iuc3RhY2suaW5kZXhPZignXFxuJykgKyAxKX1gO1xyXG4gICAgfVxyXG4gICAgdGhpcy5jb2RlID0gY29kZTtcclxuICB9XHJcbn1cclxuIl19

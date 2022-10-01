@@ -2,6 +2,7 @@
   <v-container>
     <v-layout>
       <v-card>
+        <v-alert dismissible type="success" v-model="success">Sucesso</v-alert>
         <v-card-title>
           <v-layout justify-center class="align-start">
             <v-text-field
@@ -33,7 +34,7 @@
                 <v-icon small class="mr-2" @click="handleEdit(item)"
                   >mdi-pencil</v-icon
                 >
-                <v-icon small @click="deleteStudent(item)">mdi-delete</v-icon>
+                <v-icon small @click="handleDelete(item)">mdi-delete</v-icon>
               </td>
             </tr>
           </template>
@@ -150,6 +151,7 @@ export default {
     error_text: "",
     error_type: "error",
     error: false,
+    success: false,
     valid_student: true,
     rules: {
       required(value) {
@@ -173,6 +175,7 @@ export default {
           this.option === 'edit' ? await ConfigApis.updateStudent(this.student_id, this.student) : await ConfigApis.createStudent(this.student);
           this.closeModal();
           this.initialize();
+          this.success = true;
         } catch (error) {
           this.error = true;
           this.error_type = "error";
@@ -182,18 +185,28 @@ export default {
 
     },
 
-    async handleEdit(user) {
+    handleEdit(user) {
       this.student = user;
       this.student_id = user.id
       this.option = 'edit';
       this.showModal = true;
     },
 
-    async deleteStudent(student) {
-      const index = this.users.indexOf(student);
+    async handleDelete(student) {
       confirm("Tem certeza que deseja excluir esse aluno?") &&
-        (await ConfigApis.deleteStudent(student.id));
-      this.users.splice(index, 1);
+        (await this.deleteStudent(student.id));
+    },
+
+    async deleteStudent(id) {
+      try {
+        await ConfigApis.deleteStudent(id);
+        this.initialize();
+        this.success = true;
+      } catch (error) {
+        this.error = true;
+        this.error_type = "error";
+        this.error_text = error.message;
+      }
     },
 
     closeModal() {
