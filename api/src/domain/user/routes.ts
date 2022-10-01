@@ -5,7 +5,7 @@ import validation from './validations/validation';
 export default [
   {
     method: 'post',
-    path: '/private/v1/user',
+    path: '/v1/user',
     handlers: [
       validateBody(validation.createUserValidationBody),
       userController.createUser,

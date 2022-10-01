@@ -41,6 +41,7 @@
               ></v-text-field>
             </v-form>
           </v-card-text>
+          <v-spacer></v-spacer>
           <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn
@@ -51,6 +52,7 @@
               form="login-form"
               >Login</v-btn
             >
+            <v-btn color="secondary" rounded @click="showModal = true">Cadastre-se</v-btn>
           </v-card-actions>
           <v-alert dismissible :type="error_type" v-model="error">{{
             error_text
@@ -58,6 +60,78 @@
         </v-card>
       </v-flex>
     </v-layout>
+
+    <v-dialog v-model="showModal" persistent max-width="600px">
+      <v-form
+        v-model="valid_user"
+        id="user-form"
+        @submit.prevent="createUser"
+        ref="form"
+        lazy-validation
+      >
+        <v-card>
+          <v-card-title>
+            <span class="headline"
+              >Cadastrar Usuário</span
+            >
+          </v-card-title>
+          <v-card-text>
+            <v-container grid-list-md>
+              <v-layout wrap>
+                <v-flex sm12>
+                  <v-text-field
+                    required
+                    label="Nome"
+                    v-model="user.name"
+                    outlined
+                    :rules="[rules.required]"
+                  ></v-text-field>
+                </v-flex>
+                <v-flex sm12>
+                  <v-text-field
+                    required
+                    label="Email"
+                    v-model="user.email"
+                    outlined
+                    :rules="[rules.required]"
+                  ></v-text-field>
+                </v-flex>
+                <v-flex sm12>
+                  <v-text-field
+                    required
+                    :rules="[rules.required]"
+                    v-model="user.password"
+                    prepend-icon="lock"
+                    name="current-password"
+                    label="Password"
+                    autocomplete
+                    :type="showPsw ? 'text' : 'password'"
+                    :append-icon="showPsw ? 'visibility' : 'visibility_off'"
+                    @click:append="showPsw = !showPsw"
+                  ></v-text-field>
+                </v-flex>
+              </v-layout>
+            </v-container>
+          </v-card-text>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="blue darken-1" text @click="showModal = false"
+              >Cancelar</v-btn
+            >
+            <v-btn
+              color="blue darken-1"
+              text
+              type="submit"
+              form="user-form"
+              >Cadastrar</v-btn
+            >
+          </v-card-actions>
+          <v-alert dismissible :type="error_type" v-model="error">{{
+            error_text
+          }}</v-alert>
+        </v-card>
+      </v-form>
+    </v-dialog>
   </v-container>
 </template>
 
@@ -88,6 +162,9 @@ export default {
           return !!value || "Campo obrigatório.";
         },
       },
+      showModal: false,
+      user: {},
+      valid_user: true,
     };
   },
   watch: {
@@ -131,6 +208,19 @@ export default {
         }
       }
     },
+
+    async createUser(forced) {
+      try {
+        if (forced === true || this.$refs.form.validate()) {
+          await ConfigApis.createUser(this.user)
+          this.showModal = false;
+        }
+      } catch (error) {
+        this.error = true;
+        this.error_type = "error";
+        this.error_text = error.message;
+      }
+    }
   },
 };
 </script>

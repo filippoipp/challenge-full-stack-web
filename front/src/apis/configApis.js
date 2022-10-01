@@ -46,6 +46,11 @@ export default {
 		return response.data
 	},
 
+	async createUser(data) {
+		const response = await request.post('/v1/user', data)
+		return response.data
+	},
+
 	async getStudents() {
 		const response = await request.get('/private/v1/student', { headers: { Authorization: `Bearer ${getLocalAccessToken()}` } })
 		return response.data
