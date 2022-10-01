@@ -55,4 +55,14 @@ export default {
 		const response = await request.delete(`/private/v1/student/${id}`, { headers: { Authorization: `Bearer ${getLocalAccessToken()}` } })
 		return response.data
 	},
+
+	async createStudent(data) {
+		const response = await request.post(`/private/v1/student`, data, { headers: { Authorization: `Bearer ${getLocalAccessToken()}` } })
+		return response.data
+	},
+
+	async updateStudent(id, data) {
+		const response = await request.patch(`/private/v1/student/${id}`, data, { headers: { Authorization: `Bearer ${getLocalAccessToken()}` } })
+		return response.data
+	},
 }
