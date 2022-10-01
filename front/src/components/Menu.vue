@@ -1,18 +1,10 @@
 <template>
-  <v-card
-    height="400"
-    width="256"
-    class="mx-auto"
-  >
-    <v-navigation-drawer permanent>
+    <v-navigation-drawer app>
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="text-h6">
-            Application
+            Módulo Acadêmico
           </v-list-item-title>
-          <v-list-item-subtitle>
-            subtext
-          </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
 
@@ -25,6 +17,7 @@
         <v-list-item
           v-for="item in items"
           :key="item.title"
+          :to="item.to"
           link
         >
           <v-list-item-icon>
@@ -37,5 +30,18 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-  </v-card>
 </template>
+
+<script>
+export default {
+data: () => ({
+      items: [
+        {
+          icon: 'mdi-account',
+          title: 'Alunos',
+          to: '/alunos',
+        },
+      ],
+    }),
+}
+</script>

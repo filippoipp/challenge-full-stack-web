@@ -12,7 +12,7 @@ export function generateToken() {
 
   const signInOptions: SignOptions = {
     algorithm: 'RS256',
-    expiresIn: '1h',
+    expiresIn: '24h',
   };
 
   return sign({}, privateKey, signInOptions);

@@ -2,12 +2,7 @@ import axios from 'axios'
 import { loadProgressBar } from 'axios-progress-bar'
 import Router from '../router'
 
-function getBasePath(path) {
-	return document.baseURI.replace(/\/$/, '') + (path || '')
-}
-
-axios.defaults.socketUrl = getBasePath()
-axios.defaults.baseURL = `${axios.defaults.socketUrl}/api`
+axios.defaults.baseURL = process.env.VUE_APP_API_ROOT_URL;
 
 function responseHandler(response) {
 	if (response.data && response.data.code === 3) {
@@ -38,15 +33,26 @@ const request = {
 	},
 }
 
+function getLocalAccessToken() {
+    const user = JSON.parse(localStorage.getItem("user"));
+    return user?.access_token;
+}
+
 loadProgressBar()
 
 export default {
-	// ---- LOGIN/LOGOUT ------
 	async login(data) {
-		const response = await request.post('/authenticate', data)
+		const response = await request.post('/v1/auth', data)
 		return response.data
 	},
-	logout() {
-		return request.get('/logout')
+
+	async getStudents() {
+		const response = await request.get('/private/v1/student', { headers: { Authorization: `Bearer ${getLocalAccessToken()}` } })
+		return response.data
+	},
+
+	async deleteStudent(id) {
+		const response = await request.delete(`/private/v1/student/${id}`, { headers: { Authorization: `Bearer ${getLocalAccessToken()}` } })
+		return response.data
 	},
 }
